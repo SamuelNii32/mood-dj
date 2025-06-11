@@ -1,0 +1,12 @@
+nav.navbar
+  .nav-container
+    a.nav-logo(href="/")
+      span.nav-emoji 🎧
+      span Mood DJ
+
+    .nav-links
+      a.nav-link(class=(currentPath === "/" ? "active" : ""), href="/") Home
+      a.nav-link(class=(currentPath === "/scenarios" ? "active" : ""), href="/scenarios") Scenarios
+      a.nav-link(class=(currentPath === "/about" ? "active" : ""), href="/about") How It Works
+
+    a.nav-cta(href="/scenarios") Get Started

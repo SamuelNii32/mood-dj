@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  main.scenarios-page
+    .container
+      a.back-link(href="/")
+        svg(width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2")
+          path(d="M19 12H5M12 19l-7-7 7-7")
+        | Back to Home
+
+      .scenarios-content
+        h1.page-title Choose Your Football Scenario
+
+        .scenarios-grid#scenariosGrid
+          each scenario in scenarios
+            .scenario-card(data-id=scenario.id)
+              .emoji #{scenario.emoji}
+              h2.title #{scenario.title}
+              p.description #{scenario.description}
+
+        .cta-section
+          button#selectScenarioBtn.cta-button(disabled) Create My Experience

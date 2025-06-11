@@ -1,0 +1,70 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Your Experience - Mood DJ for Footballers
+    link(rel="stylesheet", href="/css/styles.css")
+    link(href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet")
+
+  body
+    #loadingScreen.loading-screen
+      .loading-spinner
+      p.loading-text Creating your emotional experience...
+
+    main#experienceContent.experience-page(style="display: none;")
+      .experience-background
+      .experience-overlay
+
+      .experience-container
+        .experience-header
+          button#backBtn.icon-button
+            svg(width="24", height="24", viewBox="0 0 24 24", fill="none", stroke="currentColor", stroke-width="2")
+              path(d="M19 12H5")
+              path(d="M12 19l-7-7 7-7")
+
+          .experience-controls
+            button#muteBtn.icon-button
+              svg#volumeIcon(width="24", height="24", viewBox="0 0 24 24", fill="none", stroke="currentColor", stroke-width="2")
+                polygon(points="11 5 6 9 2 9 2 15 6 15 11 19 11 5")
+                path(d="M19.07 4.93a10 10 0 0 1 0 14.14")
+                path(d="M15.54 8.46a5 5 0 0 1 0 7.07")
+
+            button#refreshBtn.icon-button
+              svg(width="24", height="24", viewBox="0 0 24 24", fill="none", stroke="currentColor", stroke-width="2")
+                path(d="M23 4v6h-6")
+                path(d="M1 20v-6h6")
+                path(d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15")
+
+        .experience-content
+          h1#scenarioTitle.experience-title= scenarioTitle
+
+          .experience-visual
+            .visual-gradient
+            #experienceGif.experience-gif
+              img(src=gifUrl, alt="Football GIF")
+
+          .music-info
+            .music-label Now Playing
+            h2#trackTitle.track-title= musicTitle
+            p#artistName.artist-name= musicArtist
+
+            iframe#musicIframe(
+              width="100%",
+              height="80",
+              frameborder="0",
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture",
+              allowfullscreen,
+              src=musicUrl
+            )
+
+          .quote-section
+            p#motivationalQuote.quote-text= motivationalQuote
+
+          .mood-indicator
+            #moodEmoji.mood-emoji= moodEmoji
+            .mood-info
+              .mood-label Current Mood
+              #moodName.mood-name= moodName
+
+    script(src="/js/main.js")

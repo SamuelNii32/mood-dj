@@ -1,0 +1,62 @@
+extends layout
+
+block content
+  main.about-page
+    .container
+      a.back-link(href="/")
+        svg(width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2")
+          path(d="M19 12H5M12 19l-7-7 7-7")
+        | Back to Home
+
+      .about-content
+        h1.page-title How It Works
+
+        section.about-section
+          h2.section-title The Concept
+          p.section-text
+            | Mood DJ for Footballers is an emotional sideline experience that combines music, visuals, and
+            | AI-generated content to create personalized emotional journeys based on football scenarios. Whether
+            | you've just scored the winning goal or been benched for the final, we'll create a unique experience that
+            | matches your emotional state.
+
+        section.about-section
+          h2.section-title Technology Behind It
+          .tech-grid
+            .tech-card
+              h3.tech-title 🎵 Music Integration
+              p.tech-description
+                | We use music APIs like Spotify to select tracks that perfectly match the emotional tone of your
+                | selected scenario.
+            .tech-card
+              h3.tech-title 🖼️ Visual Experience
+              p.tech-description
+                | Dynamic backgrounds and GIFs are sourced from GIPHY and other visual libraries to create an
+                | immersive atmosphere.
+            .tech-card
+              h3.tech-title 🎙️ AI Commentary
+              p.tech-description
+                | We use OpenAI's API to generate unique motivational quotes and commentary for each scenario.
+            .tech-card
+              h3.tech-title 😎 Mood Matching
+              p.tech-description
+                | Our algorithm analyzes the emotional context of your scenario to create a fitting footballer
+                | persona.
+
+        section.about-section
+          h2.section-title Future Features
+          ul.features-list
+            li.feature-item
+              span.feature-emoji 🎤
+              span Voice synthesis to generate a coach's voice with ElevenLabs
+            li.feature-item
+              span.feature-emoji 🎬
+              span Timeline of scenes for a cinematic experience
+            li.feature-item
+              span.feature-emoji 🔄
+              span Custom scenario creation
+            li.feature-item
+              span.feature-emoji 💾
+              span Save and share your favorite experiences
+
+        .cta-section
+          a.cta-button(href="/scenarios") Try It Now

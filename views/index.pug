@@ -1,0 +1,41 @@
+extends layout
+
+block content
+  main.home-page
+    .container
+      .hero-content
+        h1.hero-title
+          span.gradient-text Mood DJ for Footballers
+
+        p.hero-subtitle
+          | The ultimate emotional sideline experience for every football moment
+
+        .hero-visual
+          .visual-overlay
+            p.visual-text Experience Your Football Emotions
+          
+          video.visual-background(autoplay loop muted playsinline)
+            source(src="/videos/background.mp4" type="video/mp4")
+
+        .features-section
+          p.features-intro
+            | Select a football scenario, and we'll create a personalized emotional experience with:
+
+          ul.features-list
+            li.feature-item
+              span.feature-emoji 🎵
+              span Curated music tracks that match your mood
+            li.feature-item
+              span.feature-emoji 🖼️
+              span Dynamic background visuals and animations
+            li.feature-item
+              span.feature-emoji 🎙️
+              span AI-generated commentary and motivational quotes
+            li.feature-item
+              span.feature-emoji 😎
+              span Footballer persona that matches your situation
+
+        a.cta-button(href="/scenarios")
+          | Get Started
+          svg.cta-arrow(width="16", height="16", viewBox="0 0 24 24", fill="none", stroke="currentColor", stroke-width="2")
+            path(d="M5 12h14M12 5l7 7-7 7")
